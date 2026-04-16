@@ -34,8 +34,8 @@
 
       outputBox.textContent = 'Generating AI response...';
 
-      // Replace this URL with your Make webhook URL
-      const webhookUrl = 'YOUR_MAKE_WEBHOOK_URL_HERE';
+      // Replace this with your Make webhook URL
+      const webhookUrl = 'https://hook.us2.make.com/prbngw4r5gwrw94gz5zc5hsw1asj3n5h';
 
       fetch(webhookUrl, {
         method: 'POST',
@@ -44,7 +44,6 @@
       })
       .then(response => response.json())
       .then(data => {
-        // Update this if your Make scenario returns a different key
         outputBox.textContent = data.response || 'No response received.';
       })
       .catch(err => {
